@@ -56,6 +56,22 @@ void wxEventLoopBase::SetActive(wxEventLoopBase* loop)
         wxTheApp->OnEventLoopEnter(loop);
 }
 
+#ifdef __WXMAC__
+static bool g_busyWaiting = false;
+
+/* static */
+bool wxEventLoopBase::GetBusyWaiting()
+{
+   return g_busyWaiting;
+}
+
+/* static */
+void wxEventLoopBase::SetBusyWaiting(bool busyWaiting)
+{
+   g_busyWaiting = busyWaiting;
+}
+#endif
+
 int wxEventLoopBase::Run()
 {
     // event loops are not recursive, you need to create another loop!
