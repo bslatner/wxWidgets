@@ -1,0 +1,15 @@
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# backup files created by Visual Studio
+build/msw/UpgradeLog.htm
+build/msw/Backup*/
+
+# Visual Studio build outputs
+build/msw/vc_mswud/
+build/msw/vc_mswudll/
+lib/*/
+
