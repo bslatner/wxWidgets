@@ -4,6 +4,9 @@
 *.userosscache
 *.sln.docstates
 
+# Intellisense and browsing data
+build/msw/*.sdf
+
 # backup files created by Visual Studio
 build/msw/UpgradeLog.htm
 build/msw/Backup*/
